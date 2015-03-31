@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<color name="black">#000000</color>
+<color name="grey">#565656</color>
+<color name="light_grey">#969696</color>
+<color name="white">#FFFFFF</color>
+<color name="divider">#dcdcdc</color>
+<color name="green">#59a60c</color>
+<color name="red">#cf1b31</color>
+<color name="blue">#4189c7</color>
+<color name="yellow">#ffc300</color>
+<color name="app_bg">#d5cfca</color>
+
+<color name="app_bg_card">#f6f6f6</color>
+
+<color name="divider_title_table">#d8d8d8</color>
+<color name="divider_inner_content">#e4e4e4</color>
+
+
+<color name="pullout_cat_bg_level_0">#00FFFFFF</color>
+<color name="pullout_cat_bg_level_1">#00F0EdE6</color>
+<color name="pullout_divider_level_0">#FFDCDCDC</color>
+<color name="pullout_divider_level_1">#FFDCDCDC</color>
+<color name="product_page_pullout_bg">#FFFFFF</color>
+<color name="flipkart_price">#c12929</color>
+<color name="product_rating">#484848</color>
+<color name="product_mrp_and_discount">#565656</color>
+<color name="title">#323232</color>
+<color name="inner_title_divider">#ffce26</color>
+<color name="view_more_bg">#ece9e0</color>
+<color name="view_more_text">#565656</color>
+<color name="continue_shopping_bg">#0A3151</color>
+<color name="overlay_bg">#B2000000</color>
+<color name="spec_table_title_bg">#e7e7e7</color>
+<color name="yellow_bg">#e8b200</color>
+<color name="email_hint">#5e5e5e</color>
+<color name="call_us_widget_bg">#f2f3ed</color>
+<color name="new_launch_bg">#f5f5ef</color>
+<color name="title_with_subtitle_bg">#f6f3f0</color>
+<color name="call_us_button_bg">#559114</color>
+<color name="login_rounded_bg">#424242</color>
+<color name ="in_app_notification_new_bg">#0071BC</color>
+<color name="elv_btn_pressed">#ff33b5e5</color>
+<color name="elv_btn_focused">#ff0099cc</color>
+<color name="elv_btn_normal">#00000000</color>
+
+<color name="elv_popup_bg_color">#EE666666</color>
+<color name="elv_separator_color">#BBBBBB</color>
+<color name="elv_popup_text_color">#FFFFFF</color>
+<color name="product_title">#323232</color>
+<color name="bucket_offer_title">#848484</color>
+<color name="grey_bg">#e5e5e5</color>
+<color name="share_font">#323232</color>
+<color name="tab_indicator_color">#FF7800</color>
+<color name="coming_soon">#e87815</color>
+<color name="sold_out">#D9f44e4e</color>
+<color name="tab_divider_color">#b4b4b4</color>
+<color name="tag_color">#9f3030</color>
+<color name="ff_bg_color">#f4f4f4</color>
+<color name="ff_stroke_color">#d1d1d1</color>
+<color name="tag_background_color">#f3f3f3</color>
+</resources>

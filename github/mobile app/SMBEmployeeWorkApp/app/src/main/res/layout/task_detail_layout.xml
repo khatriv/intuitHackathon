@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Description"
+                android:textAllCaps="true"
+                android:background="#FFDCDCDC"
+                android:gravity="center_vertical"
+                android:id="@+id/descriptionTextView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/description"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:id="@+id/desContent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Reference"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:background="#FFDCDCDC"
+                android:id="@+id/refrence" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/shirt_front"
+                    android:id="@+id/timeText" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/shirt_back"
+                    android:id="@+id/alotedTime" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Specification"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:background="#FFDCDCDC"
+                android:id="@+id/techSpec" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/tech_spec_content_string"
+                android:id="@+id/techSpecContent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bottomLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Give Update"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:layout_marginRight="2dp"
+            android:background="@color/tab_indicator_color"
+            android:textColor="#ffffff"
+            android:id="@+id/updateButton" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mark Complete"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:background="#d959a60c"
+            android:textColor="#ffffff"
+            android:id="@+id/completeButton" />
+    </LinearLayout>
+
+</FrameLayout>

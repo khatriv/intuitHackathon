@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="Day-wise"
+        android:layout_marginLeft="4dp"
+        android:textColor="@color/white"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:textSize="24sp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:background="@color/sold_out"
+        android:id="@+id/textViewDayWise"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="Week-wise"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:background="@color/elv_btn_pressed"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:id="@+id/textViewWeekWise"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="Month-wise"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@color/tab_indicator_color"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/textViewMonthWise"
+        android:layout_gravity="center" />
+</LinearLayout>
