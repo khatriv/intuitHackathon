@@ -1,0 +1,553 @@
+<html>
+<head>
+</head>
+
+<body>
+<style>
+* {
+	font-family: sans-serif, Helvetica;
+  	color: #444;
+	font-size: 15px;
+}
+.logo {
+	background:url('http://i.imgur.com/Za626N6.png');
+	  height: 87px;
+  	  width: 298px;
+	  background-position: -11px, 12px;
+	  display: inline-block;
+}
+.main2 {
+	background: #000; 
+   	z-index: 99999999999999999999999; 
+  	opacity: 0.75;
+}
+#topPanel {
+	height:14%;
+	margin-bottom: 10px;
+}
+
+.upperPane {
+	height: 85%;
+	border: 1px solid #DDD;
+}
+
+#lowerPane {
+	border: 1px solid #DDD;
+}
+
+.heading {
+	font-size: 17px;
+	font-family: sans-serif, Helvetica;
+	color: #666;
+}
+.panel {
+	display: inline-block;
+}
+#leftPane {
+	display: inline-block;
+  	width: 70%;
+  	height: 100%;
+  	float: left;
+}
+#rightPane {
+	display: inline-block;
+  	width: 29%;
+  	height: 100%;
+  	border-left: 1px solid #CCC;
+}
+#leftPane > div, #rightPane > div, .taskList {
+	margin-top: 5px;
+	padding:15px;
+}
+.employee, .feeds {
+	border: 1px solid #ddd;
+	height: 35px;
+	padding:5px;
+}
+.employee > div {
+	display: inline-block;
+	float:left;
+}
+.employee > div > span {
+	display: block;
+  	margin-top: 9px;
+  	text-align: center;
+  	color: #444;
+	font-size: 15px;
+}
+.employeeImage {
+	height: 25px;
+	width: 40px;
+	margin-right: 10px;
+	margin-left: 5px;
+	background: #17E8EF;
+  	margin-top: 3px;
+  background-size: cover;
+}
+.employeeName {
+	margin-right: 25px !important;
+	cursor: pointer;
+}
+.employeeAddTask , #addTask, #employeePageAddTask{
+	margin-right: 10px !important;
+	float:right !important;
+	background-color: #51D873;
+	border: 1px solid #CCC;
+  	text-align: center;
+  	width: 90px;
+	height: 35px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+ #employeePageAddTask{
+ 	  display: inline-block;
+ 	  margin-left: 20px;
+ 	  float: none;
+}
+#addTask > span, #employeePageAddTask > span {
+	display: block;
+  margin-top: 9px;
+  text-align: center;
+  color: #444;
+  font-size: 15px;
+}
+#taskPage, #employeePage {
+	height: 360px;
+  width: 500px;
+  border: 1px solid #CCC;
+  position: absolute;
+  background-color: #FEFEFE;
+  border-radius: 5px;
+  left:200px;
+  top:140px;
+}
+#employeePage {
+	height: 500px !important;
+}
+
+#taskForm, #employeeDetails {
+	padding : 35px;
+}
+.tasks > .item {
+	float: left;
+}
+.tasks > .status {
+	float: right;
+}
+.tasks > div {
+	margin: 5px;
+}
+
+.entry, .tasks {
+	height: 35px;
+ 	padding: 5px;
+}
+.tasks.urgent span.status {
+	color:red;
+}
+.tasks.pending span.status {
+	color:orange;
+}
+.tasks.completed span.status {
+	color:blue;
+}
+.tasks.blocked span.status {
+	color:red;
+}
+.tasks.progress span.status {
+	color:blue;
+}
+
+.tasks.pending {
+	  border-left: 5px orange solid;
+}
+.tasks.progress {
+	  border-left: 5px green solid;
+}
+.tasks.completed {
+	  border-left: 5px blue solid;
+}
+.tasks.urgent {
+	  border-left: 5px red solid;
+}
+.tasks.blocked {
+	  border-left: 5px red solid;
+}
+.tasks {
+	height: 55px !important;
+	border: 1px solid #CCC;}
+
+div.entry > span {
+  display: inline-block;
+  margin-right: 30px;
+  width: 130px;
+}
+#closeTaskPanel, #closeTaskPanel2 {
+  font-size: 12px;
+  right: -1px;
+  position: absolute;
+}
+.mainOpaque {
+	opacity: 0.2;
+  	background: #DDD;
+}
+.tabLink {
+	color:#999;
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.rTabLink {
+  color: #999;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 1px solid #CCC;
+  width: 130px;
+  text-align: center;
+  padding: 10px;
+ }
+ .rTabLink.active {
+ 	background-color: #EEE;
+ }
+#viewEmployeePanelTitle {
+	display: inline-block;
+}
+#reports {
+  padding: 25px;
+}
+
+#reportsPage {
+	padding: 25px;
+}
+.report {
+	height:130px;
+	width: 150px;
+	color:white;
+	display: inline-block;
+	text-align: center;
+  	padding-top: 10px;
+  	margin:1px;
+}
+.report.urgent {
+	background-color: red;
+}
+.report.pending {
+	background-color: #FFA500;
+}
+
+.report.completed {
+	background-color: #41ACE4;
+}
+.report.blocked {
+	background-color: #E43636;
+}
+.main4 {
+  border: 1px solid #CCC;
+  padding: 10px;
+  border-radius: 2px;
+}
+.reports.filters > div {
+  display: inline-block;
+  width: 150px;
+  border: 1px solid #CCC;
+  height: 22px;
+  padding-top: 5px;
+  text-align: center;
+}
+.reports.filters {
+	margin: 10px;
+}
+.filterCaret {
+	display: inline-block;
+	background-image: url(http://i.imgur.com/fJd5CM7.png);
+  height: 12px;
+  width: 13px;
+  background-size: cover;
+  /* background-size: contain; */
+  margin-top: 2px;
+  margin-left: 32px;
+}
+.reportPanel {
+	border-top: 1px solid #CCC;
+  	margin-top: 25px;
+}
+.tabLink.active {
+	color: #51D873;
+}
+</style>
+
+<script>
+
+</script>
+
+<div id="main1">
+
+	<div id="topPanel">
+	<div class="logo"> </div>
+	<span id="tab2" class="tabLink addTask"> Add Task</span>
+	<span id="tab4" class="tabLink viewReport"> View Report</span>
+	<span id="tab1" class="tabLink allEmployees active"> All Employees</span>
+	</div>
+	<div class="upperPane" id="allEmployees">
+		<div id="leftPane" class="panel">
+			<div class="employeePanelTitle"><span class="heading">Employees</span></div>
+			<div class="employeesList">
+				<div class="employee">
+					<div class="employeeImage"></div>
+					<div class="employeeName"> <span>Aditya Sharma <span></div>
+					<div class="employeeAddTask"> <span>Add task </span></div>
+				</div>
+				<div class="employee">
+					<div class="employeeImage"></div>
+					<div class="employeeName"> <span>Ayushi Sinha <span></div>
+					<div class="employeeAddTask"> <span>Add task </span></div>
+				</div>
+				<div class="employee">
+					<div class="employeeImage"></div>
+					<div class="employeeName"> <span>Ajay Narang<span></div>
+					<div class="employeeAddTask"> <span>Add task </span></div>
+				</div>
+				<div class="employee">
+					<div class="employeeImage"></div>
+					<div class="employeeName"> <span>Prerna Shrivastava <span></div>
+					<div class="employeeAddTask"> <span>Add task </span></div>
+				</div>
+				<div class="employee">
+					<div class="employeeImage"></div>
+					<div class="employeeName"> <span>Prerna Venkatesh <span></div>
+					<div class="employeeAddTask"> <span>Add task </span></div>
+				</div>
+				<div class="employee">
+					<div class="employeeImage"></div>
+					<div class="employeeName"> <span>Venkatesh M. <span></div>
+					<div class="employeeAddTask"> <span>Add task </span></div>
+				</div>
+				<div class="employee">
+					<div class="employeeImage"></div>
+					<div class="employeeName"> <span>Venkatesh M. <span></div>
+					<div class="employeeAddTask"> <span>Add task </span></div>
+				</div>
+			</div>
+		</div>
+		<div id="rightPane" class="panel">
+			<div class="feedsTitle"><span class="heading">Activity</span></div>
+				<div class="feedsList">
+					<div class="feeds">
+						<span>Aditya just completed task - 'polka dot shirt' </span>
+					</div>
+					<div class="feeds">
+						<span>Anshulika is off work today. </span>
+					</div>
+					<div class="feeds">
+						<span>Anshulika updated task 'Women pants' remaining 3.0 hr to 1.0 hr. </span>
+					</div>
+					<div class="feeds">
+						<span>Prerna logged in at 10AM.</span>
+					</div>
+					<div class="feeds">
+						<span>Venkatesh updated task 'Blue Cardigan' remaining 15.0hr to 10.0 hr</span>
+					</div>
+					<div class="feeds">
+						<span>One more task 'Uniform Shirts' completed. Total completed tasks 18 now.</span>
+					</div>
+					<div class="feeds">
+						<span>Venkatesh updated task 'Uniform Shirts' remaining 10.0 hr to 0.0 hr </span>
+					</div>
+					<div class="feeds">
+						<span>You have added new tasks. Total 12 tasks to assign.</span>
+					</div>
+					<div class="feeds">
+						<span>You have moved 1 task 'Blouse' to URGENT. Total 2 marked urgent.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="upperPane" id="reports" style="display:none">
+			<div id="reportsPage" >
+				<div id="rTab2" class="rTabLink daily active"> Daily</div>
+				<div id="rTab4" class="rTabLink weekly"> Weekly </div>
+				<div id="rTab1" class="rTabLink monthly"> Monthly</div>
+
+				<div class="reportPanel">
+					<div class="reports filters">
+					  <div> Dates (today)<div class="filterCaret"></div></div>
+					  <div> All Employees <div class="filterCaret"></div></div>
+					</div>
+					<div id="reports">
+						<div class="report pending"> 14 tasks Pending</div>
+						<div class="report completed"> 12 Completed</div>
+						<div class="report blocked"> 12 Blocked</div>
+						<div class="report urgent"> 2 tasks Urgent</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="lowerPane" style="text-align: center;padding: 30px;font-size: 11px;">
+			&#169; 2015, WorkBuddy, Inc. All rights reserved.
+		</div>
+	</div>
+
+
+</div>
+<div id="main2" style="display:none">
+	<div id="taskPage" >
+		<span id="closeTaskPanel">close</span>
+		<div id="taskForm">
+			<div class="addTaskPanelTitle"><span class="heading">Add Task</span></div>
+				<div class="taskList">
+					<div class="entry">
+						<span>Employee </span>
+						<input type="text"> 
+					</div>
+					<div class="entry">
+						<span>Title</span>
+						<input type="text"> 
+					</div>
+					<div class="entry">
+						<span>Date</span>
+						<input type="date"> 
+					</div>
+					<div class="entry">
+						<span>Estimated Time (hrs)</span>
+						<input type="text"> 
+					</div>
+					<div class="entry">
+						<span>Description</span>
+						<input type="text"> 
+					</div>
+				</div>
+				<div id="addTask"> <span>Add </span></div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="main3" style="display:none">
+	<div id="employeePage" >
+		<span id="closeTaskPanel2">close</span>
+		<div id="employeeDetails">
+			<div id="viewEmployeePanelTitle"><span class="heading">Aditya</span></div>
+			<div id="employeePageAddTask" style="display:none"> <span>Add </span></div>
+
+				<div class="taskList">
+					<div class="tasks urgent">
+						<div> 17 March</div>
+						<div class="item"><span>Ladies Blouse </span> </div>
+						<div class="status"><span class="status"> Urgent</span></div>
+					</div>
+					<div class="tasks completed">
+						<div> 11 March</div>
+						<div class="item"><span>Ladies Blouse </span> </div>
+						<div class="status"><span class="status"> Completed</span></div>
+					</div>	
+					<div class="tasks completed">
+						<div> 10 March</div>
+						<div class="item"><span>Ladies Blouse </span> </div>
+						<div class="status"><span class="status"> Completed</span></div>
+					</div>
+					<div class="tasks pending">
+						<div> 9 March</div>
+						<div class="item"><span>Ladies Blouse </span> </div>
+						<div class="status"><span class="status"> Pending</span></div>
+					</div>
+					<div class="tasks pending">
+						<div> 8 March</div>
+						<div class="item"><span>Ladies Blouse </span> </div>
+						<div class="status"><span class="status"> Pending</span></div>
+					</div>
+					<div class="tasks completed">
+						<div> 5 March</div>
+						<div class="item"><span>Ladies Blouse </span> </div>
+						<div class="status"><span class="status"> Completed</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+document.getElementById('closeTaskPanel').addEventListener('click', function(){
+	        document.getElementById('main1').classList.remove('mainOpaque')
+			document.getElementById('main2').style.display = "none";
+});
+
+document.getElementById('closeTaskPanel2').addEventListener('click', function(){
+	        document.getElementById('main1').classList.remove('mainOpaque')
+			document.getElementById('main3').style.display = "none";
+});
+
+var classname = document.getElementsByClassName('employeeAddTask');
+
+for(var i=0;i<classname.length;i++){
+        classname[i].addEventListener('click', function(){
+        	document.getElementById('main1').classList.add('mainOpaque')
+			document.getElementById('main2').style.display = "block";
+		}, false);
+}
+
+document.getElementById('tab2').addEventListener('click',function(){
+      	document.getElementById('main1').classList.add('mainOpaque')
+		document.getElementById('main2').style.display = "block";
+}, false);
+
+document.getElementById('tab4').addEventListener('click',function(){
+		document.getElementById('tab4').classList.add('active');
+		document.getElementById('tab2').classList.remove('active');
+		document.getElementById('tab1').classList.remove('active');
+
+    	document.getElementById('allEmployees').style.display = "none";
+		document.getElementById('reports').style.display = "block";
+}, false);
+
+document.getElementById('tab1').addEventListener('click',function(){
+      	document.getElementById('reports').style.display = "none";
+		document.getElementById('allEmployees').style.display = "block";
+		document.getElementById('tab1').classList.add('active');
+		document.getElementById('tab2').classList.remove('active');
+		document.getElementById('tab4').classList.remove('active');
+}, false);
+
+
+document.getElementById('addTask').addEventListener('click', function(){
+		document.getElementById('addTask').innerHTML = "<span>Done</span>";
+		setTimeout(function(){
+     		document.getElementById('main1').classList.remove('mainOpaque')
+			document.getElementById('main2').style.display = "none";
+			document.getElementById('addTask').innerHTML = "<span>Add</span>";
+		}, 1000);
+}, false);
+
+var images = ['http://i.imgur.com/JokFUbE.png', 'http://i.imgur.com/ta7EHRL.png','http://i.imgur.com/GEK7ebh.png','http://i.imgur.com/pwZer6f.jpg','http://i.imgur.com/pYG2Cxq.png'];
+
+classname = document.getElementsByClassName('employeeImage');
+for(var i=0;i<classname.length;i++){
+	var index = i< images.length ? i : 0;
+	classname[i].style.backgroundImage = "url(" + images[index] + ")";
+}
+
+function showEmployeeDetails(name) {
+	return function() {
+		document.getElementById('viewEmployeePanelTitle').innerText = name;
+		document.getElementById('main1').classList.add('mainOpaque')
+		document.getElementById('main3').style.display = "block";
+	};
+}
+classname = document.getElementsByClassName('employeeName');
+for(var i=0;i<classname.length;i++){
+	var name = classname[i].innerText;
+	classname[i].addEventListener('click', showEmployeeDetails(name));
+
+}
+</script>
+</body>
+
+</html>
