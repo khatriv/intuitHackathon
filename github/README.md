@@ -31,3 +31,6 @@ The idea can solve the following problems in a simple way:
 4. A rating can be given to the employees if they out-perform and/or work over-time. ‘Star’ ratings can be given to the employees (can be seen in the record section of the mobile app). This can be rewarded by paying a bonus as an appreciation.. Helps in retention of the employees.
 
 
+To run the mobile app - import the gradle to your Android Studio.
+For the web app - it's a static assests webapp. Open the file in any browser.
+
